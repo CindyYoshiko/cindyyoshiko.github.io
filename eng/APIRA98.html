@@ -1,0 +1,1591 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>APIRA98 Paper #31</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=shift_jis">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../css/eng_main-frame.css">
+</HEAD>
+
+<BODY>
+<CENTER>
+<H2>Financial Ratios as Predictors of Bankruptcy in Japan: An Empirical 
+Research</H2></CENTER><BR>
+<CENTER>
+<H3>
+<P>Cindy Yoshiko Shirata</P>
+<P>Associate Professor of Accounting,</P>
+<P>Tsukuba College of Technology Japan</P></H3></CENTER><BR><BR><BR>
+<H3>INTRODUCTION AND PURPOSE OF THE STUDY</H3><BR>
+<P>Corporate Bankruptcies in 1997 recorded 16,365 cases, over 12.5% from 1996's 
+figure of 14,544 and amount of debts was the highest in history, 14.21 trillion 
+yen in Japan. After the burst of the bubble economy in 1990, the Japanese 
+economy has been on a downward slide and many companies have been faced with 
+financial difficulties. Hence, a certain prediction model to assess the 
+financial distress of Japanese firms is required. This paper presents some 
+empirical results of a study regarding predictors of Japanese corporate failure 
+as evidenced by the event of bankruptcy.</P>
+<P>A few empirical studies of corporate bankruptcy in Japan have been 
+undertaken. However, the results of these studies are not generalizable due to 
+the limited size of their samples. In contrast, this study proposes a 
+generalizable bankruptcy prediction model based on observations of 686 firms 
+which went bankrupt, and 300 non-bankrupt firms which were extracted from 
+107,034 non-bankrupt firms by systematic sampling method. </P>
+<P>This study is comprised of two stages. First, I attempted to obtain a set of 
+the financial ratios to best predict Japanese corporate bankruptcy using data 
+mining technique without any initial hypothesis. After the variables (financial 
+ratios) selection, I hypothesized that (1) the linear Multivariate Discriminant 
+Analysis (MDA, for short) model is suitable and useful for Japanese corporate 
+bankruptcy prediction while a quadratic model and other non-parametric model are 
+not, and (2) a model using certain ratios must be a universal model independent 
+of industry or company size.</P><BR>
+<H3>QUESTIONS REGARDING PREVIOUS STUDIES</H3><BR>
+<P>There have been a fair number of previous studies addressing the prediction 
+of bankruptcy in the USA: well-known published contributions are Beaver [1966], 
+Beaver[1968], Altman [1968], Meyer &amp; Pifer [1970], Deakin[1972], Edmister 
+[1972], Altman &amp; McGough [1974] and Altman, Haldeman, and Narayanan [1977]. 
+Some other notable contributions developing probabilistic prediction models are 
+Martin [1977], Ohlson [1980], Zavgren [1985] and Lau [1987]. In Japan, there are 
+also a few notable studies: Takahashi, Kurokawa &amp; Watase [1979], Toda[1984] 
+and Gotoh[1989]. </P>
+<P>I pose some questions to the previous studies both from a statistical point 
+of view and from an accounting point of view. </P><BR>
+<H4>Statistical issues</H4><BR>
+<OL>
+  <P>
+  <LI>In previous studies, the method used to select variables is not clear. It 
+  is difficult to obtain the best set of variables at one try using statistical 
+  methods. However, previous studies never mentioned how to reduce or select the 
+  final set of variables from the initial variable set. 
+  <P></P>
+  <P></P>
+  <LI>It has not been proven whether paired sampling is advantageous or not. All 
+  researches using linear MDA typically use the paired sampling method matching 
+  bankrupt and non-bankrupt firms according to criteria such as industry and 
+  size. However, the criteria were made by researchers' arbitrary decision. 
+  Sample selection biases might also occur. Hence, in this study, samples of 
+  bankrupt and non-bankrupt firms are not matched at all
+  <P></P>
+  <P></P>
+  <LI>In the previous studies, the sample of bankrupt firms were small, e.g. 20 
+  firms to 150 firms. It is difficult to clarify the financial characteristics 
+  of bankrupt firms with such a small sample. In contrast, this study uses a 
+  large number of bankrupt firms which failed in Japan during the period between 
+  1986 to 1996, and thus develops a more generalizable model.
+  <P></P></LI></OL><BR>
+<H4>Accounting issues</H4><BR>
+<P>Each previous study mentions the list of all variables but does not clearly 
+mention the detail computation steps to obtain the variables. Income Statement 
+shows a summary of revenue and expenses of a business entity for a specific 
+period of time, such as a year. On the other hand, Balance Sheet shows a list of 
+the assets, liabilities and owner's equity of a business entity as of a specific 
+date, usually at the close of the last day of a fiscal year. Hence, the 
+statements can not be compared or computed directly. To compute the financial 
+ratios using Balance Sheet accounts, it is necessary to use averages during the 
+period to obtain accurate ratios. There are no previous studies mentioning this 
+point. </P><BR>
+<H3>METHODOLOGY</H3><BR>
+<H4>Variable selection</H4><BR>
+<P>Several previous studies had used a brute empirical approach of initially 
+choosing variables followed by Stepwise procedure to select the variables in the 
+final discriminant function. However, these studies are limited in their ability 
+to provide generalaizable results as to what financial variables can 
+consistently predict financial distress. Therefore, in this study, the following 
+systematic statistical approach is taken to select the best set of variables for 
+predicting bankruptcy.</P><BR>
+<P>(1) Data Mining Approach</P>
+<DIR>
+<P>Data mining was used to select the best set of the variables. The most 
+popular and powerful data mining tool is Classification And Regression Tree 
+model (CART model for short) which is now available with S-Plus or SAS program. 
+The purpose of a classification study can be to produce either an accurate 
+classifier or to uncover the structure of bankruptcy. This study aims for the 
+latter, and tries to get an understanding of what variables or interactions of 
+variables cause bankruptcy.</P>
+<P>CART model selects the variables accurately without any requirements of 
+statistical assumption, therefore, all collected data can be used. In this 
+study, when CART model was used to selects the variables, the variables were 
+also selected by Stepwise procedure to compare the results. Stepwise procedure 
+requires the statistical assumption that the variables are normally distributed. 
+To satisfy this hypothesis, data were trimmed off in groups of 20 from each end 
+of the ordered data.</P>
+<P>The reason two different techniques were used to select the variables was to 
+confirm the accuracy of variable selection through comparison of the results of 
+the two techniques. </P><BR></DIR>
+<P>(2) Original financial ratios</P>
+<DIR>
+<P>The original sixty-one financial ratios are listed in appendix A with certain 
+relevant statistics. The ratios were chosen on the basis of (1) popularity in 
+literature, (2) usage by the Japan Development Bank, (3) usage by Teikoku Data 
+Bank of its Cosmos 1 credit database, and (4) the author's initiated hypothesis. 
+The variables can be classified into the following categories (1) popularity in 
+the literature (X1-X8), (2) growth (X9-X12), (3) capital efficiency (X13-X16), 
+(4) profitability (X17-X24), (5) activity (X25-X38), (6) productivity (X39-X43), 
+(7) liquidity (X44-X53) and (8) coverage and other earnings relative to leverage 
+measures (X49-X61). </P></DIR><BR>
+<H4>Sample design</H4><BR>
+<P>The samples include all bankrupt firms obtained from Teikoku Data Bank 
+Cosmos1 Database. The data set for this study is 686 bankrupt firms and 300 
+non-bankrupt firms. The 300 non-bankrupt firms were extracted from 107,034 
+non-bankrupt firms by systematic sampling method. All the bankrupt firms had 
+failed between 1986 to 1996 in Japan. Although almost all the firms in the 
+sample were unlisted companies, the average size of their assets were 3,757 
+million yen (bankrupt firms) and 3,847 million yen (non-bankrupt firms). As an 
+exception, financial service companies (bank, insurance and securities firms) 
+and construction companies were excluded. Companies in these industries are 
+structurally different and have a different bankruptcy environment. In 
+particular, according to Japanese Accounting Principles, construction companies 
+can choose to define the value of their total sales either on a basis of percent 
+completion or on a basis of completed construction. This makes it difficult to 
+compare operational performances with companies in other industries. </P>
+<P>In this study, the definition of failure is purely legalistic, however, the 
+sample also includes cases of composition undertaken without courtroom 
+procedures.</P><BR>
+<H3>EMPIRICAL STUDY IN JAPAN</H3><BR>
+<H4>The first stage of reducing variables</H4><BR>
+<P>The result of the first stage of variable reduction was that almost half of 
+the variables chosen by the CART model and Stepwise procedure were the same. 
+However the ratios indicating the strongest discriminant power were different 
+for each procedure. CART model gave X2 (Retained earnings to total assets) as 
+the strongest predictor, and Stepwise procedure gave X50 (Equity to Liabilities 
+and shareholders) as the strongest predictor. I attempted to compare the 
+characteristics of these two variables to understand why each procedure chose 
+different variables as the most powerful predictor. First, the correlation 
+matrices between the two variables were examined. Table I presents the result of 
+correlation tests for both variables.</P><BR>
+<P>Take in Table I</P><BR>
+<P>The tests confirm that both X2 and X50 have strong positive correlation and 
+that the two procedures selected accurate variables because they have almost the 
+same characteristics from a statistical point of view. However, from an 
+accounting point of view, they have the different characteristics. If a company 
+increases its capital during the period and retained earnings is unchanged, X2 
+decreases while X50 increases. Here, I investigated how many bankrupt firms 
+increased their capital during the period previous to bankruptcy. It was found 
+that 17.4% of the bankrupt firms, one hundred firms, increased their capital in 
+the period previous to bankruptcy. Companies tried to increase their capital not 
+only when facing financial distress but also during their growth stage. Hence, 
+taking the conservative position to predict bankruptcy, I omitted X50 (Equity to 
+Liabilities and shareholders) as this variable can potentially mislead the 
+information user. Here, X2 and other 42 variables which were selected by one of 
+the two procedures were retained.</P><BR>
+<H4>The second stage of reducing variables</H4><BR>
+<P>In the second stage, among the top seven variables chosen by both procedures 
+six were the same. From a statistical point of view, it is certain that these 
+six variables are strong indicators of bankruptcy. These variables were X2, X10, 
+X24, X36, X39 and X53. However, it is believed that two of these, X39 (Sales Per 
+one Employee) and X53 (Fix assets to Long-term capital) are not suitable 
+variables as a predictor of bankruptcy. The statistical significance does not 
+always follow accounting logic. I strongly point out here that it is dangerous 
+to select the variables using only statistical logic.</P>
+<P>The reason why X39 and X53 are not suitable variables as predictors of 
+bankruptcy, even though they appear to strongly discriminate between bankrupt 
+and non-bankrupt firms, is explained as follows: It is widely believed that 
+ratio of Sales per one Employee should be higher and ratio of Fixed Assets to 
+Long-term capital should be lower when a firm is financially healthy. However, 
+for all practical purposes, the ratios for the bankrupt sample indicated a 
+better condition than those for the non-bankrupt sample. The reason for this is 
+that firms facing financial distress tried to reduce organizational redundancy 
+or sell fixed assets to improve cash flow. Companies facing financial distress 
+and companies in health financial condition, both indicated better ratios for 
+these variables. The drawback of statistical analysis is that it can lead to 
+incorrect conclusion. Therefore, I omitted these kinds of variables from the 
+variable set carefully following accounting logic.</P>
+<P>There were also another 15 variables commonly selected by both techniques. 
+Therefore, a total of 19 variables were retained for the final reduction 
+stage.</P><BR>
+<H4>Final stage of reducing variables</H4><BR>
+<P>The results of the final stage of variable's reduction by both procedures are 
+illustrated in Table II.</P><BR>
+<P>Take in Table II</P><BR>
+<P>As shown in the table, the first four variables chosen by both procedures are 
+the same and exhibit strong discriminant power at the second stage. As the 
+variables could not be reduced further by analytical techniques, the final set 
+of variables was selected at this stage. Hence, I chose the first four 
+variables, X2, X24, X36 and X10, for the discriminant function. I tried to add 
+other variables, however, I could not significantly improve upon the results by 
+adding or changing the set of variables.</P>
+<P>As the result of both procedures was almost the same, I could confirm that 
+the selected variable set is reliable and consistent from both statistical and 
+accounting view points.</P><BR>
+<H3>EVALUATION OF SELECTED VARIABLES</H3><BR>
+<H4>Independency of each variable</H4><BR>
+<P>The correlation among the selected variables was evaluated, as it is probable 
+that some of the financial ratios have a high degree of correlation. If some 
+variables are highly correlated, they have the same influence on the financial 
+position of the firm. Bankruptcy is caused by many different factors. Therefore, 
+it is desirable to assess a firm from many different positions. Shirata [1996] 
+pointed out that the set of variables used by Altman model [1968] could be 
+classified into two groups by principal coordinates analysis. This means that 
+the five variables chosen in his study have two different characteristics and 
+can assess firms from two different positions. If the set of four variables 
+chosen in this study do not have a high degree of correlation, they have 
+different characteristics and can assess firms from four different positions. 
+Table III &amp; Table IV present the results of the correlation analysis on the 
+four variables chosen in this study. The upper line shows the correlation 
+coefficient by Pearson and Spearman methods, and bottom line shows the 
+significance probability for the null hypothesis that the value of correlation 
+coefficient equals zero.</P><BR>
+<P>Take in Table III</P><BR>
+<P>Take in Table IV</P><BR>
+<P>The results of this examination prove that the characteristics of these four 
+variables are independent because they are uncorrelated. This also proves that 
+the selected variables in this study can assess firms from four different 
+positions.</P><BR>
+<H4>Evaluation of discriminant power</H4><BR>
+<P>The discriminant power of the set of variables which were selected in this 
+study and the set of variables which were used in previous studies [Altman 1967] 
+and Toda [1985] were compared. Both previous models consisted of five variables. 
+One of the five variables, Market value equity per value of debt, used in both 
+previous studies could not be used with the sample of this study. Therefore, the 
+discriminant power of four variables set were compared.</P>
+<P>The procedure of comparison was (1) to trim away 20 outliers from each end of 
+the ordered data, (2) to divide all samples into two groups for modeling data 
+and test data and (3) to set the cut-off point at 50%. Table V illustrates the 
+results of the evaluation of misclassification of bankruptcy and non-bankruptcy 
+using the three sets of variables.</P><BR>
+<P>Take in Table V</P><BR>
+<P>The result of this evaluation proves that the set of variables selected in 
+this study has the power of discriminant between bankrupt firms and non-bankrupt 
+firms as the misclassification ratio was just 15.96%. Altman [1968] stated that 
+the misclassification ratio using the financial ratios he selected one year 
+prior to bankruptcy was 4% for the bankrupt group and 21% for the non-bankrupt 
+group. However, the analysis of his study was done with just 33 manufacturing 
+firms using paired sampling method. Accordingly, his model is not generalizable 
+due to the limited size of his sample using paired sampling method. In contrast, 
+the variable set selected in this study is more reliable and generalizable 
+because the analysis was done with more than 520 firms from many different 
+industries including manufacturing, wholesale, retail and service.</P>
+<P>Another examination of the discriminant analysis for the mean value of each 
+group, bankrupt firms and non-bankrupt firms was also undertaken. The result 
+showed that the mean value for the bankrupt group was 98.05% bankrupt 
+probability, and the mean value for the non-bankrupt group was 74.24% 
+non-bankrupt probability, with a 50% cut-off point. Even though the cut-off 
+point was 50%, the type I error is smaller than the type II error, which is 
+preferable.</P><BR>
+<H4>Evaluation of the influence of industry and size</H4><BR>
+<P>It is widely believed that industry and size influence the relationship 
+between financial ratios and bankruptcy status. However, Altman [1968] pointed 
+out in his study that "it is not completely clear what the relationship is 
+between size and ratio" and "matching exact asset size of the two groups seemed 
+unnecessary." Therefore, this study hypothesizes that there is no influence 
+between the selected variables in this study and industry or size.</P>
+<P>Before starting the analysis, all samples were classified by industry and 
+size. It must be mentioned here that it is popular to classify firms not by 
+asset size but by capital size in Japan. Therefore, they were classified by 
+capital size in this study. Table-6 illustrates the result of 
+classification.</P><BR>
+<P>Take in Table VI</P><BR>
+<P>There were three classifications for industry. The Wholesale &amp; Retail 
+group consisted of 390 wholesalers and 67 retailers. The others group consisted 
+of 50 transportation firms, 127 service industries and 8 firms from other 
+industries.</P>
+<P>At first, the results of discriminant analysis for each industry group and 
+for each capital group were compared, and the mean value of each group was 
+analyzed. The results of the analysis are presented in Table VII and Table 
+VIII.</P><BR>
+<P>Take in Table VII</P><BR>
+<P>Take in Table VIII</P><BR>
+<P>The mean value for each of the bankrupt groups was more than 92% bankruptcy 
+probability. Only the non-bankrupt firms of the other industry group showed 
+48.8% non-bankrupt probability. However, the purpose for assessing the firms was 
+to predict bankruptcy, and the cost of type I error was more expensive than type 
+II error. Therefore, the results of this examination prove that the set of 
+variables selected in this study can significantly discriminate the bankrupt 
+group independent of industry and size. The reason why the discriminant power of 
+the variables set was significant is that these four variables are not 
+influenced by industry or size.</P>
+<P>In this study, I also attempted to find which variables are influenced by 
+industry and size through data mining technique, CART.</P><BR>
+<P>Take in Table IX</P><BR>
+<P>It is clear that if the variables presented in Table IX were selected for the 
+discriminant function, the result of the discriminant analysis would be affected 
+by industry and size. On the other hand, the variables selected in this study do 
+not include these variables. Therefore I can conclude here that (1) it could not 
+be proved that industry and size influence the bankruptcy phenomenon more than 
+the four selected variables and (2) the variables which are influenced by 
+industry and size are not included among the selected variables of this study. 
+Therefore, the variables selected in this study are the universal predictor of 
+bankruptcy beyond industry and size.</P><BR>
+<H3>MULTIVARIATE DISCRIMINANT ANALYSIS MODEL</H3><BR>
+<H4>Suitable Model</H4><BR>
+<P>I attempt to develop the MDA model using the selected four financial ratios. 
+Before developing the model, there is the question of whether a linear model is 
+suitable than quadratic or other non-parametric model, normal kernel method 
+model. Altman [1968] pointed out in his study that the holdout sample tests 
+indicate a clear superiority of linear frameworks. This should also be verified 
+using the four financial ratios selected in this study. To verify this, I 
+assessed eleven Japanese bankrupt firms which were not included in the original 
+sample with linear, quadratic and normal kernel method model using the four 
+selected variables (refer to Appendix B). These eleven firms had been listed in 
+the Japanese stock market when they went bankrupt during the period between 1986 
+- 1996. </P>
+<P>The most notable result was the bankruptcy probability of Ga-jo-en Kanko K.K. 
+which entered into arrangement procedures in January 1997. The ratio of Retained 
+earnings to total assets (X2) of firm was -102.89 one year prior to bankruptcy 
+which leaves no doubt regarding its impending insolvency. However, the 
+bankruptcy probability indicated by the quadratic model and the normal kernel 
+method were 0%. On the other hand, the linear model estimated its bankruptcy 
+probability as 99.99%. The results of these three models were completely 
+opposite. And it is clear that the linear model is the superior model for 
+predicting bankruptcy in Japan.</P><BR>
+<H4>Modeling and cut-off point</H4><BR>
+<P>Since the accuracy and reliability of the four selected variables have been 
+proven, I developed the linear MDA function as follow:</P><BR>
+<DIR><B>
+<P>Z = 0.014X2 - 0.058X24 - 0.062X36 - 0.003X10 + 0.7416</P></B><BR></DIR>
+<P>I analyze the distribution of the Z score for both bankrupt and non-bankrupt 
+groups to fix the cut-off point. Classification accuracy of the model will 
+change depending on the cut-off point. The balance of type I error cost and type 
+II error cost should be considered. Finally, 0.38 was chosen as the Z value that 
+best discriminates bankrupt firms and non-bankrupt firms with the lowest 
+misclassification cost. Firms with Z values less than 0.38 have a high 
+probability (86.14%) of going bankrupt. However, it must not be forgotten that 
+the most important point is not the cut-off point, but which variables to use 
+for the function. </P><BR>
+<H3>CHARACTERISTICS OF BANKRUPTCY IN JAPAN</H3><BR>
+<H4>Characteristics of Corporate Behavior</H4><BR>
+<P>Having selected the variable set for the prediction model, I can explain 
+corporate behavior facing financial distress in Japan as follow;</P><BR>
+<DIR><I>
+<P>When the cumulative profitability of a firm decreases (the ratio of "X2 
+Retained earnings to total assets" decreases), it asks its suppliers to extend 
+the date for payment to increase its cash flow (the ratio of "X36 Note payable + 
+accounts payable x12 to Sales" is larger). However once it asks its suppliers to 
+extend the date for payment, news of bad credit travels through the market. This 
+news makes its Bank anxious about its financial condition. Therefore, the Bank 
+requests that it pays an additional premium for its loan (the ratio of "X24 
+Interest and discount expense to borrowings + corporate bond + note receivable 
+discounted" increases). Cash spending increases and the company tries to raise 
+funds, increasing liabilities or capital in a year (the ratio of "X10 Current 
+gross capital to Previous gross capital -1" increases). </P></I><BR></DIR>
+<P>It should be specially noted that among the four variables of the model, 
+profitability is not included. The major cause of decreasing cumulative 
+profitability (reducing X2) is decreasing profitability. However, even though a 
+company's profitability decreases, it can have plenty of cumulative 
+profitability and may not go bankrupt.</P><BR>
+<H4>Transition of Z score of Japanese Bankrupt Firms </H4><BR>
+<P>I examine eleven Japanese listed bankrupt firms to determine the overall 
+effectiveness of the model for a longer period of time prior to their 
+bankruptcies. Altman [1968] mentioned in his study that after three years prior 
+to the bankruptcy, the discriminant model becomes unreliable in its predictive 
+ability.</P><BR>
+<P>Take in Graph I</P><BR>
+<P>Graph I presents the transition of Z score of eleven firms for ten years 
+prior to their bankruptcies. It was found that almost all firms had shown worse 
+Z score for ten years continuously. I suppose that this is one of the typical 
+financial characteristics of Japanese bankrupt firms. Because the majority of 
+corporate stockholders of listed firms in Japan are banks and other corporation. 
+It is called cross-shareholding, MOCHIAI. It's easier for firms to obtain 
+financing from a bank which is a shareholder even though the financial condition 
+of the firm were getting worse. Hence, suitable size firms like listed companies 
+cannot go bankrupt as soon as they failed in their business. This means if you 
+assess firms with the certain model, you can recognize the sing of their 
+failures for a considerable time prior to actual bankruptcies.</P><BR><BR>
+<H3>CONCLUSIONS</H3><BR>
+<P>The model developed in this paper is significantly more accurate in 
+predicting bankruptcy for Japan firms than existing models. </P>
+<P>One of the notable points is that the variables selected in this study do not 
+include profitability and liquidity ratios. It is widely believed that 
+profitability and liquidity ratios can predict bankruptcy to a certain extent. 
+However, it is proven in this study that these financial ratios could not expose 
+the financial distress of Japanese firms. Another noteworthy point is that the 
+model proposed in this study is a universal model which is not influenced by 
+industry and size. I proved that the model could classify bankrupt firms with 
+more than 86.14% accuracy independent of industry and size. I also proved that 
+the Japanese bankrupt firms had indicated their worse financial position for a 
+considerable time before they actually went bankrupt. </P><BR><BR><BR>
+<H4>References</H4><BR>
+<UL>
+  <LI>Altman, E. I., 1968, "Financial Ratio, Discriminant Analysis and 
+  Prediction of Corporate Bankruptcy",<I> Journal of Finance,</I> September 
+  1968, pp.589-610. 
+  <LI>Altman, E., R. G. Haldeman and P. Narayanan, 1977, "ZETA Analysis: A new 
+  model to indentify bankruptcy risk of corporations", <I>Journal of Banking and 
+  Finance, </I>Vol.1, June 1977, pp.29-35. 
+  <LI>Beaver, W., 1967, "Financial Ratio as Predictors of Failure, <I>Empirical 
+  Research in Accounting: Selected Studies 1966", Journal of Accounting 
+  Research,</I> Supplement to vol.4,<I> </I>1967, pp.71-111. 
+  <LI>------------------, 1968, "Alternative Accounting Measures as Predictors 
+  of Failure", <I>The Accounting Review, </I>January 1968, pp.113-122. 
+  <LI>Deakin, E.B., 1972, "A Discriminant Analysis of Predictors of Business 
+  Failure", <I>Journal of Accounting Research, </I>Spring 1972, pp.167-179. 
+  <LI>----------------, 1976, "Distributions of Financial Ratios: Some Empirical 
+  Evidence", <I>Accounting Review,</I> January 1976, pp.90-96. 
+  <LI>Forsyth, T.B., 1991, <I>A Study of the Ability of Financial Ratio to 
+  Predict Corporate Failure and the Relationship between Bankruptcy Model 
+  Probability</I>, Ph.D. Thesis, The University of Alabama, Alabama. 
+  <LI>Edmister, R., 1972, "An Empirical Test of Financial Ratio Analysis for 
+  Small Business Failure Prediction", <I>Journal of Finance and Quantitative 
+  Analysis, </I>March 1972, pp.1477-1493. 
+  <LI>Gotoh, J., 1989, <I>Bankruptcy Analysis and Accounting Information</I>, 
+  Dobun-Kan, Tokyo. 
+  <LI>Lau, A.H.L., 1987, "A Five-State Financial Distress Prediction Mode", 
+  <I>Journal of Accounting Research,</I> 25 (Spring), pp.127-138. 
+  <LI>Martin, D., 1977, "Early Warning of Bank Failure", <I>Journal of Banking 
+  and Finance, </I>vol. 7, pp.249-276. 
+  <LI>Meyer, P., and H. Pifer, 1970, "Prediction of Bank Failures", <I>Journal 
+  of Finance,</I> September 1970, pp853-868. 
+  <LI>Ohlson, J., 1980, "Financial Ratio and the Probabilistic Prediction of 
+  Bankruptcy", <I>Journal of Accounting Research, </I>vol. 18, pp.109-131. 
+  <LI>Shirata, C.Y., 1995, 1995, "Read the Sign of Business Failure", <I>Journal 
+  of Risk and Management</I>, Vol. 23, pp.117-138. 
+  <LI>------------------, 1996, "Prove the Significance of Multivariate 
+  Discriminat Analysis Model", <I>Journal of Risk and Management</I>, Vol. 25, 
+  pp.101-110. 
+  <LI>Takahashi, Kurokawa &amp; Watase, 1979, "Financial Characteristics of 
+  Bankrupt firms", <I>Keio Management,</I> April 1979, pp.40-64. 
+  <LI>Toda, T., 1984, <I>Preventive Strategy of Corporate Bankruptcy, 
+  </I>Dobun-kan, Tokyo. 
+  <LI>Zavgren, C.V., 1985, "Assessing the Vulnerability to Failure of American 
+  Industrial firms: A Logistic Analysis", <I>Journal of Business Finance and 
+  Accounting</I>, Spring, pp.19-45. </LI></UL><BR><BR><BR><B>
+<P>Appendix A Listing all variables, Univariate W: Normal, T-value based on one 
+year prior to bankruptcy data</P></B>
+<P>
+<TABLE cellSpacing=1 cellPadding=1 width=580 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="6%"><BR></TD>
+    <TD vAlign=top width="43%">
+      <P>Valiable</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>unit</P></TD>
+    <TD vAlign=top width="23%" colSpan=2>
+      <P align=center>W:Normal(%)**</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>T-value</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>No.</P></TD>
+    <TD vAlign=top width="43%">
+      <P align=center>Name</P></TD>
+    <TD vAlign=top width="14%"><BR></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>Failed</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>Nonfailed</P></TD>
+    <TD vAlign=top width="14%"><BR></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X1</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Net income before tax/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>60</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>89</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-4.5857***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X2</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Retained earnings*/total assets*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>85</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>97</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-8.9932</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X3</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Quick assets*/current liability*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>97</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>96</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.6720***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X4</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Interest and discount expense/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>86</P></TD>
+    <TD vAlign=top width="14%">
+      <P>8.2369</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X5</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Working capital*/total assets*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>97</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>98</P></TD>
+    <TD vAlign=top width="14%">
+      <P>2.3931***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X6</P></TD>
+    <TD vAlign=top width="43%">
+      <P>EBIT/total assets*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>87</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>94</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.3243***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X7</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Sales/total assets*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>90</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>89</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-1.1084</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X8</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Net income before tax/total assets*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>69</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>93</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-6.0700***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X9</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Sales at beginning of a period/Sales at end of a period)-1</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>90</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>91</P></TD>
+    <TD vAlign=top width="14%">
+      <P>3.2464</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X10</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Current period liabilities and</P>
+      <P>shareholders equity/Previous</P>
+      <P>period liability and shareholders</P>
+      <P>equity)-1</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>88</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>97</P></TD>
+    <TD vAlign=top width="14%">
+      <P>4.4717</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X11</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Current period equity/Previous</P>
+      <P>period equity)-1</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>66</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>81</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-1.9230</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X12</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Current period operating income/ Previous period operating 
+      income)-1</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>69</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>70</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-1.1676</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X13</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Operating income/Liabilities and</P>
+      <P>shareholders equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>73</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>95</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-5.6935***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X14</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Operating income + interest and</P>
+      <P>discount expense)/Liabilities and</P>
+      <P>shareholders equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>89</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>96</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.5517***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X15</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Operating income/Equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>75</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>91</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.1305</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X16</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Net income after tax/Equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>65</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>87</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-2.9970</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X17</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Operating expense/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>97</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-0.4641</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X18</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Non-operating revenue/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>73</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>63</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.8115***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X19</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Non-operating expense/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>88</P></TD>
+    <TD vAlign=top width="14%">
+      <P>7.7245</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X20</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Operating income/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>64</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-4.4375***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X21</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Net income after tax/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>53</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>74</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.4192</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X22</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Interest income - interest and</P>
+      <P>discount expense)/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>91</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>85</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-7.5267</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X23</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Interest income/(Short term loans +</P>
+      <P>long term loans + securities + fixed</P>
+      <P>assets investment + investment +</P>
+      <P>cash)*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>88</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>90</P></TD>
+    <TD vAlign=top width="14%">
+      <P>6.5135</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X24</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Interest and discount expense/</P>
+      <P>(Short term borrowings + long term</P>
+      <P>borrowings + corporate bond +</P>
+      <P>convertible bond + note receivable</P>
+      <P>discounted)*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>94</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>90</P></TD>
+    <TD vAlign=top width="14%">
+      <P>9.4707</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X25</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Liabilities and shareholders equity*</P>
+      <P>x12/Sales*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>93</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>91</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.4467***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X26</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Fix assets* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>80</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.4507***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X27</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Current assets* x 12/sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>93</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>90</P></TD>
+    <TD vAlign=top width="14%">
+      <P>4.3516***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X28</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Tangible fixed assets* x 12/sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>76</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>84</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.5704***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X29</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Note receivable + accounts</P>
+      <P>receivable )* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>95</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>95</P></TD>
+    <TD vAlign=top width="14%">
+      <P>1.1382***</P></TD></TR></TBODY></TABLE></P><BR><BR>
+<P>
+<TABLE cellSpacing=1 cellPadding=1 width=574 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="6%"><BR></TD>
+    <TD vAlign=top width="44%">
+      <P>Valiable</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>unit</P></TD>
+    <TD vAlign=top width="23%" colSpan=2>
+      <P align=center>W:Normal(%)**</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>T-value</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>No.</P></TD>
+    <TD vAlign=top width="44%">
+      <P align=center>Name</P></TD>
+    <TD vAlign=top width="14%"><BR></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>Failed</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>Nonfailed</P></TD>
+    <TD vAlign=top width="14%"><BR></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X30</P></TD>
+    <TD vAlign=top width="44%">
+      <P>(Note receivable + accounts</P>
+      <P>receivable + note receivable</P>
+      <P>discounted)* x12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>98</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>95</P></TD>
+    <TD vAlign=top width="14%">
+      <P>5.7244***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X31</P></TD>
+    <TD vAlign=top width="44%">
+      <P>(Note receivable + note receivable</P>
+      <P>discounted)* x12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>94</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>85</P></TD>
+    <TD vAlign=top width="14%">
+      <P>5.4292***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X32</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Note receivable discounted* x 12/</P>
+      <P>Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>82</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>81</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-1.2495***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X33</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Accounts receivable x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>83</P></TD>
+    <TD vAlign=top width="14%">
+      <P>2.4612***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X34</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Inventory* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>79</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>73</P></TD>
+    <TD vAlign=top width="14%">
+      <P>4.6638</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X35</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Finished goods* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>70</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>60</P></TD>
+    <TD vAlign=top width="14%"><BR></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X36</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Note payable + accounts payable)* x</P>
+      <P>12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>97</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>95</P></TD>
+    <TD vAlign=top width="14%">
+      <P>6.1259***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X37</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Note payable* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>97</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>90</P></TD>
+    <TD vAlign=top width="14%">
+      <P>7.6018***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X38</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Accounts payable* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>94</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.0767***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X39</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Sales/Number of Employee s*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>bill.\</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>70</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>66</P></TD>
+    <TD vAlign=top width="14%">
+      <P>3.7484</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X40</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Gross Margin/Number of</P>
+      <P>employees*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>bill.\</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>83</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>93</P></TD>
+    <TD vAlign=top width="14%">
+      <P>2.1961</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X41</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Selling and administrative expense/ Number of employees*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>mill.\</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>81</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P>1.4868</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X42</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Operating income/Number of</P>
+      <P>employees*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>mill.\</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>79</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.5941***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X43</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Tangible assets*/Number of</P>
+      <P>employees*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>mill.\</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>64</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>75</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.1217</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X44</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Current assets*/Current liabilities*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>96</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>94</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.8669***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X45</P></TD>
+    <TD vAlign=top width="44%">
+      <P>(Note receivable + accounts</P>
+      <P>receivable)*/(Note payable +</P>
+      <P>accounts payable)*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>79</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>87</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.6659***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X46</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Cash* x 365/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>day</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>85</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>91</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-0.0569***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X47</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Quick assets*/(Selling and</P>
+      <P>administrative expense/365)</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>day</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>77</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>89</P></TD>
+    <TD vAlign=top width="14%">
+      <P>4.1256</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X48</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Cash*/(Selling and administrative</P>
+      <P>expense/365)</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>day</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>75</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>81</P></TD>
+    <TD vAlign=top width="14%">
+      <P>2.4518</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X49</P></TD>
+    <TD vAlign=top width="44%">
+      <P>(Current assets + fixed assets)*/</P>
+      <P>Equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>73</P></TD>
+    <TD vAlign=top width="14%">
+      <P>6.0121</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X50</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Equity*/Liabilities and shareholders</P>
+      <P>equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>94</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-9.0807</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X51</P></TD>
+    <TD vAlign=top width="44%">
+      <P>(Short term borrowings + long term</P>
+      <P>borrowings + corporate bond + note</P>
+      <P>receivable discounted)*/Liabilities</P>
+      <P>and equity + note receivable</P>
+      <P>discounted*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>98</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>98</P></TD>
+    <TD vAlign=top width="14%">
+      <P>5.5479</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X52</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Fixed assets*/Equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>85</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>69</P></TD>
+    <TD vAlign=top width="14%">
+      <P>1.2565</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X53</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Fixed assets*/Fixed liabilities and</P>
+      <P>equity*</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>93</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-3.3950***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X54</P></TD>
+    <TD vAlign=top width="44%">
+      <P>(Tangible assets at end of peirod -</P>
+      <P>tangible assets at beginning of</P>
+      <P>peirod)/Tangible assets at</P>
+      <P>beginning of period</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>%</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>27</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>70</P></TD>
+    <TD vAlign=top width="14%">
+      <P>2.9670</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X55</P></TD>
+    <TD vAlign=top width="44%">
+      <P>Operating income + interest income/</P>
+      <P>interest and discount expense</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>times</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>71</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>23</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-2.3259</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X56</P></TD>
+    <TD vAlign=top width="44%">
+      <P>(Current liabilities and fixed</P>
+      <P>liabilities)* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>88</P></TD>
+    <TD vAlign=top width="14%">
+      <P>2.3295</P></TD></TR></TBODY></TABLE></P><BR><BR>
+<P>
+<TABLE cellSpacing=1 cellPadding=1 width=574 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="6%"><BR></TD>
+    <TD vAlign=top width="43%">
+      <P>Valiable</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>unit</P></TD>
+    <TD vAlign=top width="23%" colSpan=2>
+      <P align=center>W:Normal(%)**</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>T-value</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>No.</P></TD>
+    <TD vAlign=top width="43%">
+      <P align=center>Name</P></TD>
+    <TD vAlign=top width="14%"><BR></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>Failed</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>Nonfailed</P></TD>
+    <TD vAlign=top width="14%"><BR></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X57</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Current liabilities* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>88</P></TD>
+    <TD vAlign=top width="14%">
+      <P>3.3856***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X58</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Short term borrowings* x12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>81</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>80</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.9872***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X59</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Equity* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>88</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>92</P></TD>
+    <TD vAlign=top width="14%">
+      <P>-7.3663</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X60</P></TD>
+    <TD vAlign=top width="43%">
+      <P>Fixed liabilites* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>83</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>81</P></TD>
+    <TD vAlign=top width="14%">
+      <P>0.6141***</P></TD></TR>
+  <TR>
+    <TD vAlign=top width="6%">
+      <P>X61</P></TD>
+    <TD vAlign=top width="43%">
+      <P>(Corporate bond + long term</P>
+      <P>borrowings)* x 12/Sales</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>month</P></TD>
+    <TD vAlign=top width="9%">
+      <P align=center>83</P></TD>
+    <TD vAlign=top width="14%">
+      <P align=center>80</P></TD>
+    <TD vAlign=top width="14%">
+      <P>1.2250***</P></TD></TR></TBODY></TABLE></P><BR>
+<P>Notation:</P>
+<P>* average amount during the period</P>
+<P>** trimmed off each 20 data from each end of ordered data.</P>
+<P>*** in case of the level of <I>F-</I>value is more than 
+5%.</P><BR><BR><BR><B>
+<P>Appendix B The Result of Linear, Quadratic and other non-parametric Analysis 
+one year prior to Bankruptcy of Japanese Listed Firms</P><BR></B>
+<TABLE cellSpacing=1 cellPadding=6 width=680 border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="29%"><BR>
+      <P>Name of Firms </P></TD>
+    <TD vAlign=top width="12%" colSpan=2>
+      <P align=center>Year of Bankruptcy</P></TD>
+    <TD vAlign=top width="10%"><BR>
+      <P align=center>X2 </P></TD>
+    <TD vAlign=top width="10%"><BR>
+      <P align=center>X10 </P></TD>
+    <TD vAlign=top width="8%"><BR>
+      <P align=center>X24 </P></TD>
+    <TD vAlign=top width="8%"><BR>
+      <P align=center>X36 </P></TD>
+    <TD vAlign=top width="8%"><BR>
+      <P align=center>Linear</P></TD>
+    <TD vAlign=top width="7%">
+      <P align=center>Quad-ratic</P></TD>
+    <TD vAlign=top width="8%">
+      <P align=center>Normal</P>
+      <P align=center>Kernel</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Toyo Tanshi Co., Ltd.</P></TD>
+    <TD vAlign=top>
+      <P>1986.4</P></TD>
+    <TD vAlign=top>
+      <P align=right>4.718</P></TD>
+    <TD vAlign=top>
+      <P align=right>-7.610</P></TD>
+    <TD vAlign=top>
+      <P align=right>6.834</P></TD>
+    <TD vAlign=top>
+      <P align=right>2.835</P></TD>
+    <TD vAlign=top>
+      <P align=right>67.62</P></TD>
+    <TD vAlign=top>
+      <P align=right>61.46</P></TD>
+    <TD vAlign=top>
+      <P align=right>84.23</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Ohto Co., Ltd.</P></TD>
+    <TD vAlign=top>
+      <P>1986.5</P></TD>
+    <TD vAlign=top>
+      <P align=right>17.132</P></TD>
+    <TD vAlign=top>
+      <P align=right>40.267</P></TD>
+    <TD vAlign=top>
+      <P align=right>10.648</P></TD>
+    <TD vAlign=top>
+      <P align=right>2.358</P></TD>
+    <TD vAlign=top>
+      <P align=right>86.83</P></TD>
+    <TD vAlign=top>
+      <P align=right>99.66</P></TD>
+    <TD vAlign=top>
+      <P align=right>76.49</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Kokko Steel Works Co., Ltd.</P></TD>
+    <TD vAlign=top>
+      <P>1986.8</P></TD>
+    <TD vAlign=top>
+      <P align=right>-30.564</P></TD>
+    <TD vAlign=top>
+      <P align=right>-10.333</P></TD>
+    <TD vAlign=top>
+      <P align=right>5.883</P></TD>
+    <TD vAlign=top>
+      <P align=right>2.857</P></TD>
+    <TD vAlign=top>
+      <P align=right>98.27</P></TD>
+    <TD vAlign=top>
+      <P align=right>0.01</P></TD>
+    <TD vAlign=top>
+      <P align=right>100.00</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Lek Inc.</P></TD>
+    <TD vAlign=top>
+      <P>1992.5</P></TD>
+    <TD vAlign=top>
+      <P align=right>14.907</P></TD>
+    <TD vAlign=top>
+      <P align=right>13.897</P></TD>
+    <TD vAlign=top>
+      <P align=right>6.718</P></TD>
+    <TD vAlign=top>
+      <P align=right>2.662</P></TD>
+    <TD vAlign=top>
+      <P align=right>49.50</P></TD>
+    <TD vAlign=top>
+      <P align=right>33.35</P></TD>
+    <TD vAlign=top>
+      <P align=right>43.72</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Daichibo Co., LTd.</P></TD>
+    <TD vAlign=top>
+      <P>1992.10</P></TD>
+    <TD vAlign=top>
+      <P align=right>-15.031</P></TD>
+    <TD vAlign=top>
+      <P align=right>-15.351</P></TD>
+    <TD vAlign=top>
+      <P align=right>7.302</P></TD>
+    <TD vAlign=top>
+      <P align=right>2.772</P></TD>
+    <TD vAlign=top>
+      <P align=right>94.55</P></TD>
+    <TD vAlign=top>
+      <P align=right>17.71</P></TD>
+    <TD vAlign=top>
+      <P align=right>99.98</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Nikkatsu Co., Ltd.</P></TD>
+    <TD vAlign=top>
+      <P>1993.7</P></TD>
+    <TD vAlign=top>
+      <P align=right>-4.220</P></TD>
+    <TD vAlign=top>
+      <P align=right>-8.731</P></TD>
+    <TD vAlign=top>
+      <P align=right>7.089</P></TD>
+    <TD vAlign=top>
+      <P align=right>1.824</P></TD>
+    <TD vAlign=top>
+      <P align=right>78.70</P></TD>
+    <TD vAlign=top>
+      <P align=right>45.49</P></TD>
+    <TD vAlign=top>
+      <P align=right>84.21</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Koyo Machinery Co., Ltd.</P></TD>
+    <TD vAlign=top>
+      <P>1993.12</P></TD>
+    <TD vAlign=top>
+      <P align=right>8.739</P></TD>
+    <TD vAlign=top>
+      <P align=right>7.216</P></TD>
+    <TD vAlign=top>
+      <P align=right>6.307</P></TD>
+    <TD vAlign=top>
+      <P align=right>5.024</P></TD>
+    <TD vAlign=top>
+      <P align=right>80.46</P></TD>
+    <TD vAlign=top>
+      <P align=right>89.02</P></TD>
+    <TD vAlign=top>
+      <P align=right>87.55</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Oriental Photo Industrial</P></TD>
+    <TD vAlign=top>
+      <P>1995.5</P></TD>
+    <TD vAlign=top>
+      <P align=right>0.676</P></TD>
+    <TD vAlign=top>
+      <P align=right>-4.370</P></TD>
+    <TD vAlign=top>
+      <P align=right>4.446</P></TD>
+    <TD vAlign=top>
+      <P align=right>1.267</P></TD>
+    <TD vAlign=top>
+      <P align=right>36.92</P></TD>
+    <TD vAlign=top>
+      <P align=right>20.10</P></TD>
+    <TD vAlign=top>
+      <P align=right>14.36</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Ga-jo-en Kanko KK</P></TD>
+    <TD vAlign=top>
+      <P>1997.1</P></TD>
+    <TD vAlign=top>
+      <P align=right>-102.891</P></TD>
+    <TD vAlign=top>
+      <P align=right>9.732</P></TD>
+    <TD vAlign=top>
+      <P align=right>3.768</P></TD>
+    <TD vAlign=top>
+      <P align=right>0.293</P></TD>
+    <TD vAlign=top>
+      <P align=right>99.99</P></TD>
+    <TD vAlign=top>
+      <P align=right>00.00</P></TD>
+    <TD vAlign=top>
+      <P align=right>00.00</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Kyotaru Co., Ltd.</P></TD>
+    <TD vAlign=top>
+      <P>1997.1</P></TD>
+    <TD vAlign=top>
+      <P align=right>3.594</P></TD>
+    <TD vAlign=top>
+      <P align=right>-3.447</P></TD>
+    <TD vAlign=top>
+      <P align=right>4.408</P></TD>
+    <TD vAlign=top>
+      <P align=right>0.423</P></TD>
+    <TD vAlign=top>
+      <P align=right>22.50</P></TD>
+    <TD vAlign=top>
+      <P align=right>18.57</P></TD>
+    <TD vAlign=top>
+      <P align=right>44.13</P></TD></TR>
+  <TR>
+    <TD vAlign=top colSpan=2>
+      <P>Yaohan Japan Corporation</P></TD>
+    <TD vAlign=top>
+      <P>1997.9</P></TD>
+    <TD vAlign=top>
+      <P align=right>-5.451</P></TD>
+    <TD vAlign=top>
+      <P align=right>-10.141</P></TD>
+    <TD vAlign=top>
+      <P align=right>2.768</P></TD>
+    <TD vAlign=top>
+      <P align=right>1.012</P></TD>
+    <TD vAlign=top>
+      <P align=right>29.80</P></TD>
+    <TD vAlign=top>
+      <P align=right>6.47</P></TD>
+    <TD vAlign=top>
+      <P align=right>19.51</P></TD></TR></TBODY></TABLE>
+<P>Notation:</P>
+<P>Linear and Quadratic: Discriminant Analysis with 50% cut-off point</P>
+<P>Normal Kernel: diameter r = 0.4</P>
+<DIR></DIR><BR><BR><BR></BODY></HTML>
