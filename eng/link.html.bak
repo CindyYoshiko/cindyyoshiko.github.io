@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>link</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=Shift_JIS">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../css/eng_main-frame.css">
+</HEAD>
+
+<BODY>
+<H2>Link</H2>
+
+<UL><H3>
+  <LI><A href="http://www.xbrl.org/Home/" target="_top">eXtensible Business Reporting Language</A>
+  <LI><A href="https://www.asb.or.jp/en" target="_top">Accounting Standards Board of Japan/Financial Accounting Standards Foundation</A>
+  <LI><A href="http://www.fsa.go.jp/en/index.html" target="_top">Financial Services Agency Japan</A>
+  <LI><A href="http://www.jpx.co.jp/english/" target="_top">Tokyo Stock Exchange Home Page</A>
+  <LI><A href="http://www.hp.jicpa.or.jp/english/" target="_top">The Japan Institute of Certified Public Accountants</A>
+  <LI><A href="http://www.tdb.co.jp/english/index.html" target="_top">TBD (Teikoku Data Bank) Home Page</A>
+   <LI><A href="http://www.teikoku.com/" target="_top">TBD (Teikoku Data Bank) USA</A>
+  <LI><A href="http://www.zenginkyo.or.jp/en/index.html" target="_top">Japanese Bankers Association</A>
+  <LI><A href="http://www.nta.go.jp/foreign_language/index.htm" target="_top">National Tax Agency Japan</A>
+  <LI><A href="http://www.stat.go.jp/english/" target="_top">Web Statistics Bureau, Director-General for Policy Planning & Statistical Research and Training Institute</A>
+  <LI><A href="http://www.meti.go.jp/english/index.html" target="_top">Ministry of Economy, Trade and Industry Japan</A>
+ </H3></LI></UL>
+</BODY></HTML>

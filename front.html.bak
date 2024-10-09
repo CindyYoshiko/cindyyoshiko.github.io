@@ -1,0 +1,21 @@
+<!doctype html public "-//W3C//DTD HTML 4.0//EN">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>The Research of Bankruptcy Prediction</title>
+</head>
+
+<frameset rows=95,* frameborder="no" framespacing="0">
+<frame title="Title Frame" src="title.html" name="title-frame" scrolling="no" noresize>
+<frameset cols=13%,* frameborder="no" framespacing="0">
+<frame title="Menu Frame" src="menu.html" name="menu-frame" scrolling="auto" noresize>
+<frame title="Content Frame - What's New" src="whatsnew.html" name="main-frame" scrolling="auto">
+</frame></frame>
+<noframes>
+<body>
+<p>Sorry, only FRAME is supported.</P>
+
+</body>
+</noframes>
+</frameset></frameset>
+</html>

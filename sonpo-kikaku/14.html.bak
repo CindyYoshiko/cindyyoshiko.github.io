@@ -63,8 +63,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
    <w:OverlayMode>0</w:OverlayMode>
    <w:PageNUp>1</w:PageNUp>
   </w:DocumentVariables>
-  <w:NoLineBreaksAfter Lang="JA">$([¥{‘“〈《「『【〔＄（［｛「£¥</w:NoLineBreaksAfter>
-  <w:NoLineBreaksBefore Lang="JA">!%),.:;?]}°’”‰′″℃、。々〉》」』】〕゛゜ゝゞ・ヽヾ！％），．：；？］｝。」、・゛゜¢</w:NoLineBreaksBefore>
+  <w:NoLineBreaksAfter Lang="JA">$([¥{‘“〈《「『【〔＄（［｛｢£￥</w:NoLineBreaksAfter>
+  <w:NoLineBreaksBefore Lang="JA">!%),.:;?]}°’”‰′″℃、。々〉》」』】〕゛゜ゝゞ・ヽヾ！％），．：；？］｝｡｣､･ﾞﾟ¢</w:NoLineBreaksBefore>
  </w:WordDocument>
 </xml><![endif]-->
 <style>

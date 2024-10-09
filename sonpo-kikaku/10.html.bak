@@ -67,8 +67,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
    <w:ValidCPLLPP>1</w:ValidCPLLPP>
    <w:ViewGrid>1</w:ViewGrid>
   </w:DocumentVariables>
-  <w:NoLineBreaksAfter Lang="JA">$([¥{‘“〈《「『【〔＄（［｛「£¥</w:NoLineBreaksAfter>
-  <w:NoLineBreaksBefore Lang="JA">!%),.:;?]}°’”‰′″℃、。々〉》」』】〕゛゜ゝゞ・ヽヾ！％），．：；？］｝。」、・゛゜¢</w:NoLineBreaksBefore>
+  <w:NoLineBreaksAfter Lang="JA">$([¥{‘“〈《「『【〔＄（［｛｢£￥</w:NoLineBreaksAfter>
+  <w:NoLineBreaksBefore Lang="JA">!%),.:;?]}°’”‰′″℃、。々〉》」』】〕゛゜ゝゞ・ヽヾ！％），．：；？］｝｡｣､･ﾞﾟ¢</w:NoLineBreaksBefore>
  </w:WordDocument>
 </xml><![endif]-->
 <style>
